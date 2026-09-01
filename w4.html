@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>สถานที่ท่องเที่ยวยอดฮิตในกรุงเทพมหานคร</title>
+
+    <meta charset="UTF-8">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            font-family: Tahoma, Arial, sans-serif;
+
+            color: white;
+
+            background-image:
+                linear-gradient(
+                    rgba(3, 18, 55, 0.65),
+                    rgba(2, 12, 40, 0.90)
+                ),
+                url("C:/NG/p2.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
+            min-height: 100vh;
+        }
+
+
+        /* ===== เมนูด้านบน ===== */
+
+        .navbar {
+            width: 100%;
+
+            padding: 20px 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: rgba(0, 15, 50, 0.65);
+
+            border-bottom: 1px solid rgba(255,255,255,0.25);
+
+            backdrop-filter: blur(10px);
+        }
+
+
+        .logo {
+            font-size: 25px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+
+        .logo span {
+            color: #FFD43B;
+        }
+
+
+        .navbar a {
+            color: white;
+
+            text-decoration: none;
+
+            margin-left: 25px;
+
+            font-size: 16px;
+        }
+
+
+        .navbar a:hover {
+            color: #FFD43B;
+        }
+
+
+        /* ===== หัวข้อ ===== */
+
+        .header {
+            text-align: center;
+
+            padding: 55px 20px 30px;
+        }
+
+
+        .header h1 {
+            font-size: 48px;
+
+            margin: 10px;
+
+            text-shadow: 3px 3px 12px black;
+        }
+
+
+        .header p {
+            font-size: 19px;
+
+            color: #eeeeee;
+        }
+
+
+        .line {
+            width: 70px;
+
+            height: 5px;
+
+            background: #FFD43B;
+
+            margin: 20px auto;
+        }
+
+
+        /* ===== กล่องสถานที่ ===== */
+
+        .places {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            padding-bottom: 50px;
+        }
+
+
+        .place {
+
+            background: rgba(255,255,255,0.12);
+
+            border: 1px solid
+                rgba(255,255,255,0.30);
+
+            border-radius: 20px;
+
+            padding: 28px;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.35);
+
+            transition: 0.3s;
+        }
+
+
+        .place:hover {
+
+            transform:
+                translateY(-10px);
+
+            border-color: #FFD43B;
+
+            background:
+                rgba(255,255,255,0.18);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.5);
+        }
+
+
+        .icon {
+
+            font-size: 45px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .place h2 {
+
+            color: #FFD43B;
+
+            font-size: 24px;
+
+            margin: 10px 0;
+        }
+
+
+        .place p {
+
+            line-height: 1.8;
+
+            color: #eeeeee;
+
+            font-size: 15px;
+        }
+
+
+        .info {
+
+            margin-top: 15px;
+
+            padding-top: 12px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.20);
+
+            color: #ddd;
+
+            font-size: 14px;
+        }
+
+
+        /* ===== ปุ่ม ===== */
+
+        .button-area {
+
+            text-align: center;
+
+            padding-bottom: 50px;
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            padding: 14px 35px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #FFD43B,
+                    #F2A900
+                );
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.4);
+
+            transition: 0.3s;
+        }
+
+
+        .button:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(255,210,50,0.5);
+        }
+
+
+        /* ===== หน้าจอเล็ก ===== */
+
+        @media (max-width: 900px) {
+
+            .places {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .places {
+
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .header h1 {
+
+                font-size: 35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= เมนู ================= -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            🏙️ <span>BANGKOK</span>
+        </div>
+
+        <div>
+
+             <a href="w1.html">
+            หน้าแรก
+        </a>
+
+        <a href="w4.html">
+            สถานที่ท่องเที่ยว
+        </a>
+        
+        <a href="w5.html">
+             กิจกรรมน่าสนใจ
+        </a>
+
+         <a href="w6.html">
+             วางแผนการเดินทาง
+         </a>
+
+            <a href="w7.html">
+                 เกี่ยวกับเรา
+         </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= หัวข้อ ================= -->
+
+    <div class="header">
+
+        <h1>
+            ✨ สถานที่ท่องเที่ยวยอดฮิต
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+            เปิดประสบการณ์เที่ยวกรุงเทพมหานคร
+            เมืองแห่งวัฒนธรรม แสงสี และความสนุก
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= สถานที่ท่องเที่ยว ================= -->
+
+    <div class="places">
+
+
+        <!-- 1 -->
+
+        <div class="place">
+
+            <div class="icon">
+                👑
+            </div>
+
+            <h2>
+                พระบรมมหาราชวัง
+            </h2>
+
+            <p>
+                พระบรมมหาราชวังเป็นสถานที่สำคัญทางประวัติศาสตร์
+                และเป็นหนึ่งในสถานที่ท่องเที่ยวที่มีชื่อเสียงของกรุงเทพมหานคร
+                ภายในบริเวณมีสถาปัตยกรรมไทยที่งดงาม
+                และเป็นที่ตั้งของวัดพระศรีรัตนศาสดาราม
+                หรือวัดพระแก้ว
+            </p>
+
+            <div class="info">
+                📍 เขตพระนคร<br>
+                ⭐ จุดเด่น : สถาปัตยกรรมไทยและประวัติศาสตร์
+            </div>
+
+        </div>
+
+
+
+        <!-- 2 -->
+
+        <div class="place">
+
+            <div class="icon">
+                🛕
+            </div>
+
+            <h2>
+                วัดพระแก้ว
+            </h2>
+
+            <p>
+                วัดพระศรีรัตนศาสดาราม หรือวัดพระแก้ว
+                เป็นพระอารามหลวงที่มีความสำคัญอย่างยิ่ง
+                ตั้งอยู่ภายในพระบรมมหาราชวัง
+                มีสถาปัตยกรรมและจิตรกรรมที่งดงาม
+                เป็นสถานที่สำคัญทางศาสนาและวัฒนธรรมไทย
+            </p>
+
+            <div class="info">
+                📍 เขตพระนคร<br>
+                ⭐ จุดเด่น : พระแก้วมรกตและจิตรกรรมฝาผนัง
+            </div>
+
+        </div>
+
+
+
+        <!-- 3 -->
+
+        <div class="place">
+
+            <div class="icon">
+                🌅
+            </div>
+
+            <h2>
+                วัดอรุณราชวราราม
+            </h2>
+
+            <p>
+                วัดอรุณราชวรารามราชวรมหาวิหาร
+                เป็นวัดสำคัญริมแม่น้ำเจ้าพระยา
+                มีพระปรางค์ขนาดใหญ่ที่ตกแต่งด้วยกระเบื้อง
+                และเป็นหนึ่งในสัญลักษณ์ที่โดดเด่นของกรุงเทพมหานคร
+            </p>
+
+            <div class="info">
+                📍 เขตบางกอกใหญ่<br>
+                ⭐ จุดเด่น : พระปรางค์ริมแม่น้ำเจ้าพระยา
+            </div>
+
+        </div>
+
+
+
+        <!-- 4 -->
+
+        <div class="place">
+
+            <div class="icon">
+                🧘
+            </div>
+
+            <h2>
+                วัดโพธิ์
+            </h2>
+
+            <p>
+                วัดพระเชตุพนวิมลมังคลาราม หรือวัดโพธิ์
+                เป็นวัดเก่าแก่ที่มีความสำคัญทางประวัติศาสตร์
+                และเป็นแหล่งเรียนรู้ด้านศิลปวัฒนธรรมไทย
+                อีกทั้งยังมีชื่อเสียงจากพระพุทธไสยาสน์
+            </p>
+
+            <div class="info">
+                📍 เขตพระนคร<br>
+                ⭐ จุดเด่น : พระพุทธไสยาสน์และศิลปกรรมไทย
+            </div>
+
+        </div>
+
+
+
+        <!-- 5 -->
+
+        <div class="place">
+
+            <div class="icon">
+                🏮
+            </div>
+
+            <h2>
+                เยาวราช
+            </h2>
+
+            <p>
+                เยาวราชเป็นย่านที่มีชื่อเสียงด้านอาหาร
+                วัฒนธรรมไทยเชื้อสายจีน และบรรยากาศยามค่ำคืน
+                มีร้านอาหารริมทางและร้านอาหารมากมาย
+                เหมาะสำหรับการเดินเที่ยวและสัมผัสบรรยากาศของเมือง
+            </p>
+
+            <div class="info">
+                📍 เขตสัมพันธวงศ์<br>
+                ⭐ จุดเด่น : อาหารและวัฒนธรรมไทย-จีน
+            </div>
+
+        </div>
+
+
+
+        <!-- 6 -->
+
+        <div class="place">
+
+            <div class="icon">
+                🛍️
+            </div>
+
+            <h2>
+                ไอคอนสยาม
+            </h2>
+
+            <p>
+                ศูนย์การค้าและแหล่งท่องเที่ยวริมแม่น้ำเจ้าพระยา
+                มีร้านค้า ร้านอาหาร และพื้นที่ที่นำเสนอ
+                ศิลปวัฒนธรรมไทยร่วมกับความทันสมัย
+                พร้อมจุดชมวิวริมแม่น้ำที่สวยงาม
+            </p>
+
+            <div class="info">
+                📍 เขตคลองสาน<br>
+                ⭐ จุดเด่น : ช้อปปิ้ง อาหาร และวิวแม่น้ำ
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- ================= ปุ่มกลับ ================= -->
+
+    <div class="button-area">
+
+        <a href="w1.html" class="button">
+            🏠 กลับหน้าแรก
+        </a>
+
+    </div>
+
+
+</body>
+
+</html>

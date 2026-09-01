@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>วางแผนการเดินทาง | กรุงเทพมหานคร</title>
+
+    <style>
+        *{box-sizing:border-box;}
+
+        body{
+            margin:0;
+            font-family:Tahoma, sans-serif;
+            background:
+            linear-gradient(rgba(255,240,248,.88),rgba(235,247,255,.92)),
+            url("C:/NG/p2.jpg");
+            background-size:cover;
+            background-attachment:fixed;
+            color:#5B4B6A;
+        }
+
+        /* เมนู */
+        .navbar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:18px 45px;
+            background:rgba(255,255,255,.55);
+            backdrop-filter:blur(12px);
+            border-bottom:2px solid #F8C8DC;
+        }
+
+        .logo{
+            font-size:26px;
+            font-weight:bold;
+            color:#D86BA3;
+        }
+
+        .navbar a{
+            text-decoration:none;
+            color:#7A5C8E;
+            margin-left:20px;
+            font-weight:bold;
+        }
+
+        .navbar a:hover{
+            color:#FF8FB1;
+        }
+
+        /* หัวเว็บ */
+        .header{
+            text-align:center;
+            padding:55px 20px;
+        }
+
+        .header h1{
+            font-size:48px;
+            color:#D86BA3;
+            margin-bottom:10px;
+        }
+
+        .header p{
+            font-size:18px;
+            color:#6E5A7E;
+        }
+
+        .line{
+            width:90px;
+            height:6px;
+            background:#FFD97D;
+            margin:18px auto;
+            border-radius:10px;
+        }
+
+        /* กล่อง */
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:auto;
+        }
+
+        .intro{
+            background:rgba(255,255,255,.7);
+            padding:30px;
+            border-radius:22px;
+            text-align:center;
+            box-shadow:0 8px 25px rgba(0,0,0,.08);
+            margin-bottom:35px;
+        }
+
+        .intro h2{
+            color:#8A7DFF;
+        }
+
+        /* ตารางเวลา */
+        .section-title{
+            text-align:center;
+            color:#D86BA3;
+            font-size:32px;
+            margin:45px 0 25px;
+        }
+
+        .timeline{
+            display:grid;
+            gap:20px;
+        }
+
+        .card{
+            background:rgba(255,255,255,.75);
+            border-radius:20px;
+            padding:22px;
+            box-shadow:0 6px 18px rgba(0,0,0,.08);
+            border-left:10px solid #A5D8FF;
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-6px);
+        }
+
+        .time{
+            display:inline-block;
+            background:#FFE5EC;
+            color:#D86BA3;
+            padding:6px 14px;
+            border-radius:20px;
+            font-weight:bold;
+            margin-bottom:10px;
+        }
+
+        .card h3{
+            margin:8px 0;
+            color:#6C63FF;
+        }
+
+        .info{
+            margin-top:12px;
+            font-size:14px;
+            color:#666;
+        }
+
+        /* 3 กล่องเทศกาล */
+        .festival{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:20px;
+            margin-top:20px;
+        }
+
+        .fest-card{
+            background:rgba(255,255,255,.8);
+            border-radius:20px;
+            padding:22px;
+            text-align:center;
+            box-shadow:0 6px 18px rgba(0,0,0,.08);
+        }
+
+        .fest-card h3{
+            color:#FF7AA2;
+        }
+
+        .emoji{
+            font-size:45px;
+        }
+
+        /* Tips */
+        .tips{
+            background:linear-gradient(135deg,#FFE5EC,#E3F4FF);
+            border-radius:22px;
+            padding:28px;
+            margin:40px 0;
+        }
+
+        .tips h2{
+            text-align:center;
+            color:#7A6CFF;
+        }
+
+        .tips ul{
+            line-height:2;
+        }
+
+        /* ปุ่ม */
+        .button-area{
+            text-align:center;
+            padding-bottom:50px;
+        }
+
+        .button{
+            text-decoration:none;
+            background:linear-gradient(135deg,#FFB7D5,#FFD97D);
+            color:white;
+            padding:14px 34px;
+            border-radius:30px;
+            font-weight:bold;
+            box-shadow:0 8px 18px rgba(255,150,180,.3);
+        }
+
+        .button:hover{
+            opacity:.9;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- เมนู -->
+<div class="navbar">
+    <div class="logo">🌸 BANGKOK TRAVEL</div>
+
+    <div>
+         <a href="w1.html">
+            หน้าแรก
+        </a>
+
+        <a href="w4.html">
+            สถานที่ท่องเที่ยว
+        </a>
+        
+        <a href="w5.html">
+             กิจกรรมน่าสนใจ
+        </a>
+
+         <a href="w6.html">
+             วางแผนการเดินทาง
+         </a>
+
+            <a href="w7.html">
+                 เกี่ยวกับเรา
+         </a>
+    </div>
+</div>
+
+<!-- หัวข้อ -->
+<div class="header">
+    <h1>🗺️ วางแผนการเดินทางในกรุงเทพฯ</h1>
+    <div class="line"></div>
+    <p>เที่ยวได้ทั้งกลางวัน กลางคืน และช่วงเทศกาล พร้อมไอเดียทริปใน 1 วัน</p>
+</div>
+
+<div class="container">
+
+    <!-- เกริ่น -->
+    <div class="intro">
+        <h2>✨ เที่ยวกรุงเทพฯ ให้คุ้มในหนึ่งวัน</h2>
+        <p>
+            กรุงเทพมหานครมีเสน่ห์แตกต่างกันในแต่ละช่วงเวลา
+            ตอนเช้าเหมาะกับการไหว้พระและชมประวัติศาสตร์
+            ตอนบ่ายเดินห้างหรือคาเฟ่ ส่วนกลางคืนเต็มไปด้วยแสงสี
+            และอาหารอร่อยริมทาง
+        </p>
+    </div>
+
+    <!-- กลางวัน -->
+    <h2 class="section-title">☀️ แผนเที่ยวช่วงกลางวัน</h2>
+
+    <div class="timeline">
+
+        <div class="card">
+            <div class="time">08:00 น.</div>
+            <h3>🛕 ไหว้พระวัดพระแก้ว</h3>
+            <p>เริ่มต้นวันด้วยการสักการะพระแก้วมรกต และชมพระบรมมหาราชวัง</p>
+            <div class="info">📍 เขตพระนคร • ใช้เวลา 1–2 ชั่วโมง</div>
+        </div>
+
+        <div class="card" style="border-left-color:#FFD97D;">
+            <div class="time">11:00 น.</div>
+            <h3>🍜 ชิมอาหารย่านเยาวราช</h3>
+            <p>ลิ้มลองก๋วยจั๊บ ขนมปังปิ้ง และอาหารสตรีทฟู้ดชื่อดัง</p>
+            <div class="info">📍 MRT วัดมังกร</div>
+        </div>
+
+        <div class="card" style="border-left-color:#FFB7D5;">
+            <div class="time">14:00 น.</div>
+            <h3>🛍️ เดินเล่น ICONSIAM</h3>
+            <p>ช้อปปิ้ง คาเฟ่ และชมวิวแม่น้ำเจ้าพระยาในห้างริมแม่น้ำสุดหรู</p>
+            <div class="info">🚇 BTS เจริญนคร</div>
+        </div>
+
+    </div>
+
+    <!-- กลางคืน -->
+    <h2 class="section-title">🌙 แผนเที่ยวช่วงกลางคืน</h2>
+
+    <div class="timeline">
+
+        <div class="card" style="border-left-color:#CDB4FF;">
+            <div class="time">18:00 น.</div>
+            <h3>🚤 ล่องเรือเจ้าพระยา</h3>
+            <p>ชมพระอาทิตย์ตกและวิวเมืองริมแม่น้ำ พร้อมบรรยากาศสุดโรแมนติก</p>
+            <div class="info">⛴️ ท่าเรือสาทร</div>
+        </div>
+
+        <div class="card" style="border-left-color:#9BF6FF;">
+            <div class="time">19:30 น.</div>
+            <h3>🌃 ถ่ายรูปเอเชียทีค</h3>
+            <p>เดินเล่นริมแม่น้ำ ชิงช้าสวรรค์ และร้านค้าบรรยากาศกลางคืน</p>
+            <div class="info">📸 จุดเช็กอินยอดนิยม</div>
+        </div>
+
+        <div class="card" style="border-left-color:#FFC6FF;">
+            <div class="time">21:00 น.</div>
+            <h3>🎶 เยาวราชยามค่ำ</h3>
+            <p>ปิดท้ายด้วยของหวาน ชานม และอาหารกลางคืนสุดคึกคัก</p>
+            <div class="info">🌙 เหมาะกับสายกิน</div>
+        </div>
+
+    </div>
+
+    <!-- เทศกาล -->
+    <h2 class="section-title">🎊 เที่ยวช่วงเทศกาล</h2>
+
+    <div class="festival">
+
+        <div class="fest-card">
+            <div class="emoji">💦</div>
+            <h3>สงกรานต์</h3>
+            <p>เล่นน้ำที่ถนนข้าวสาร สีลม และวัดต่าง ๆ พร้อมกิจกรรมสืบสานประเพณีไทย</p>
+        </div>
+
+        <div class="fest-card">
+            <div class="emoji">🌕</div>
+            <h3>ลอยกระทง</h3>
+            <p>ลอยกระทงริมแม่น้ำเจ้าพระยา ชมการแสดง แสงไฟ และดอกไม้ไฟยามค่ำคืน</p>
+        </div>
+
+        <div class="fest-card">
+            <div class="emoji">🎄</div>
+            <h3>คริสต์มาส & ปีใหม่</h3>
+            <p>ถ่ายรูปไฟประดับที่ CentralWorld, ICONSIAM และชมการนับถอยหลังสุดอลังการ</p>
+        </div>
+
+    </div>
+
+    <!-- Tips -->
+    <div class="tips">
+        <h2>💖 เคล็ดลับการเดินทาง</h2>
+
+        <ul>
+            <li>🚆 ใช้ BTS และ MRT เพื่อหลีกเลี่ยงรถติด</li>
+            <li>💳 เตรียมบัตรโดยสารหรือชำระผ่าน QR ได้สะดวก</li>
+            <li>☀️ พกน้ำดื่มและร่ม หากเที่ยวช่วงกลางวัน</li>
+            <li>📱 ตรวจสอบสภาพอากาศก่อนออกเดินทาง</li>
+            <li>🎉 ช่วงเทศกาลควรเผื่อเวลาเดินทางมากกว่าปกติ</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- ปุ่ม -->
+<div class="button-area">
+    <a href="w1.html" class="button">🏠 กลับหน้าแรก</a>
+</div>
+
+</body>
+</html>

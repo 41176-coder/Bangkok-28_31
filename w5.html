@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>กิจกรรมที่น่าสนใจในกรุงเทพมหานคร</title>
+
+    <meta charset="UTF-8">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family: Tahoma, Arial, sans-serif;
+
+            color: white;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(3, 18, 55, 0.68),
+                    rgba(2, 12, 40, 0.92)
+                ),
+
+                url("C:/NG/p2.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            background-repeat: no-repeat;
+
+            min-height: 100vh;
+
+        }
+
+
+
+        /* ================= เมนูด้านบน ================= */
+
+        .navbar {
+
+            width: 100%;
+
+            padding: 20px 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background:
+                rgba(0, 15, 50, 0.70);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.25);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+
+        .logo {
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .logo span {
+
+            color: #FFD43B;
+
+        }
+
+
+        .navbar a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin-left: 25px;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .navbar a:hover {
+
+            color: #FFD43B;
+
+        }
+
+
+
+        /* ================= หัวข้อ ================= */
+
+        .header {
+
+            text-align: center;
+
+            padding: 55px 20px 35px;
+
+        }
+
+
+        .header h1 {
+
+            font-size: 48px;
+
+            margin: 10px;
+
+            text-shadow:
+                3px 3px 12px black;
+
+        }
+
+
+        .header h1 span {
+
+            color: #FFD43B;
+
+        }
+
+
+        .header p {
+
+            font-size: 19px;
+
+            color: #eeeeee;
+
+            line-height: 1.8;
+
+        }
+
+
+        .line {
+
+            width: 75px;
+
+            height: 5px;
+
+            background: #FFD43B;
+
+            margin: 20px auto;
+
+            border-radius: 10px;
+
+        }
+
+
+
+        /* ================= คำเกริ่น ================= */
+
+        .intro {
+
+            width: 85%;
+
+            max-width: 1100px;
+
+            margin: 0 auto 45px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background:
+                rgba(255,255,255,0.11);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.25);
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 8px 30px
+                rgba(0,0,0,0.35);
+
+        }
+
+
+        .intro h2 {
+
+            color: #FFD43B;
+
+            margin-top: 0;
+
+            font-size: 28px;
+
+        }
+
+
+        .intro p {
+
+            line-height: 1.9;
+
+            font-size: 16px;
+
+            color: #eeeeee;
+
+        }
+
+
+
+        /* ================= การ์ดกิจกรรม ================= */
+
+        .activities {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            padding-bottom: 50px;
+
+        }
+
+
+        .activity {
+
+            background:
+                rgba(255,255,255,0.12);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.30);
+
+            border-radius: 22px;
+
+            padding: 28px;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.35);
+
+            transition: 0.35s;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .activity::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 4px;
+
+            background: #FFD43B;
+
+        }
+
+
+        .activity:hover {
+
+            transform:
+                translateY(-10px);
+
+            background:
+                rgba(255,255,255,0.18);
+
+            border-color:
+                #FFD43B;
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.50);
+
+        }
+
+
+        .icon {
+
+            font-size: 48px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .activity h2 {
+
+            color: #FFD43B;
+
+            font-size: 23px;
+
+            margin: 10px 0 15px;
+
+        }
+
+
+        .activity p {
+
+            color: #eeeeee;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* ================= ข้อมูลกิจกรรม ================= */
+
+        .info {
+
+            margin-top: 18px;
+
+            padding-top: 15px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.20);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            color: #dddddd;
+
+        }
+
+
+        .tag {
+
+            display: inline-block;
+
+            margin-top: 12px;
+
+            padding: 6px 13px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,212,59,0.18);
+
+            color: #FFD43B;
+
+            font-size: 13px;
+
+        }
+
+
+
+        /* ================= ข้อความท้าย ================= */
+
+        .ending {
+
+            width: 85%;
+
+            max-width: 1000px;
+
+            margin: 20px auto 45px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,212,59,0.18),
+                    rgba(255,255,255,0.08)
+                );
+
+            border:
+                1px solid
+                rgba(255,212,59,0.35);
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(10px);
+
+        }
+
+
+        .ending h2 {
+
+            color: #FFD43B;
+
+            font-size: 30px;
+
+        }
+
+
+        .ending p {
+
+            color: #eeeeee;
+
+            line-height: 1.9;
+
+            font-size: 16px;
+
+        }
+
+
+
+        /* ================= ปุ่มกลับ ================= */
+
+        .button-area {
+
+            text-align: center;
+
+            padding-bottom: 60px;
+
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            padding: 14px 35px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #FFD43B,
+                    #F2A900
+                );
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.4);
+
+            transition: 0.3s;
+
+        }
+
+
+        .button:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(255,210,50,0.5);
+
+        }
+
+
+
+        /* ================= หน้าจอเล็ก ================= */
+
+        @media (max-width: 900px) {
+
+            .activities {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .activities {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+            }
+
+
+            .header h1 {
+
+                font-size: 35px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+<!-- ================= เมนู ================= -->
+
+<div class="navbar">
+
+    <div class="logo">
+
+        🏙️ <span>BANGKOK</span>
+
+    </div>
+
+
+    <div>
+
+        <a href="w1.html">
+            หน้าแรก
+        </a>
+
+        <a href="w4.html">
+            สถานที่ท่องเที่ยว
+        </a>
+
+        <a href="w5.html">
+            กิจกรรมน่าสนใจ
+        </a>
+        
+        <a href="w6.html">
+             วางแผนการเดินทาง
+        </a>
+
+        <a href="w7.html">
+                 เกี่ยวกับเรา
+         </a>
+
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= หัวข้อ ================= -->
+
+<div class="header">
+
+    <h1>
+
+        🎉 กิจกรรมที่น่าสนใจ
+        <span>ในกรุงเทพฯ</span>
+
+    </h1>
+
+
+    <div class="line"></div>
+
+
+    <p>
+
+        เที่ยว กิน ช้อป ชมวิว และสัมผัส
+        วิถีชีวิตของกรุงเทพมหานคร
+        ในแบบที่คุณชื่นชอบ
+
+    </p>
+
+</div>
+
+
+
+<!-- ================= เกริ่นนำ ================= -->
+
+<div class="intro">
+
+    <h2>
+        🌆 กรุงเทพฯ เมืองที่มีกิจกรรมให้ค้นพบไม่รู้จบ
+    </h2>
+
+
+    <p>
+
+        กรุงเทพมหานครไม่ได้มีเพียงสถานที่ท่องเที่ยว
+        แต่ยังเต็มไปด้วยกิจกรรมหลากหลายรูปแบบ
+        ตั้งแต่การไหว้พระ ชมสถาปัตยกรรม
+        เดินตลาด ชิมอาหารริมทาง
+        ล่องเรือแม่น้ำเจ้าพระยา
+        ไปจนถึงการชมวิวเมืองในยามค่ำคืน
+
+    </p>
+
+
+    <p>
+
+        ไม่ว่าจะมาเที่ยวกับครอบครัว เพื่อน
+        หรือมาเดินเที่ยวคนเดียว
+        กรุงเทพฯ ก็มีมุมที่น่าสนใจ
+        ให้คุณออกไปค้นพบอยู่เสมอ
+
+    </p>
+
+</div>
+
+
+
+<!-- ================= กิจกรรม ================= -->
+
+<div class="activities">
+
+
+
+    <!-- 1 -->
+
+    <div class="activity">
+
+        <div class="icon">
+            🛕
+        </div>
+
+
+        <h2>
+            ไหว้พระและชมวัด
+        </h2>
+
+
+        <p>
+
+            เยี่ยมชมวัดสำคัญของกรุงเทพฯ
+            พร้อมสัมผัสสถาปัตยกรรม
+            ศิลปวัฒนธรรม และบรรยากาศ
+            อันสงบใจท่ามกลางเมืองใหญ่
+
+        </p>
+
+
+        <div class="info">
+
+            📍 แนะนำ : วัดพระแก้ว วัดโพธิ์
+            และวัดอรุณราชวราราม
+
+            <br>
+
+            🕘 เหมาะสำหรับ : ช่วงเช้า
+
+        </div>
+
+
+        <div class="tag">
+            วัฒนธรรม • ประวัติศาสตร์
+        </div>
+
+    </div>
+
+
+
+    <!-- 2 -->
+
+    <div class="activity">
+
+        <div class="icon">
+            🍜
+        </div>
+
+
+        <h2>
+            ตะลุยกินอาหารกรุงเทพฯ
+        </h2>
+
+
+        <p>
+
+            ลิ้มลองอาหารหลากหลายตั้งแต่
+            อาหารริมทาง อาหารไทย
+            ไปจนถึงร้านอาหารสมัยใหม่
+            กรุงเทพฯ เป็นเมืองที่เต็มไปด้วย
+            เมนูอร่อยให้เลือกมากมาย
+
+        </p>
+
+
+        <div class="info">
+
+            📍 แนะนำ : เยาวราช
+            ตลาดพลู และย่านบรรทัดทอง
+
+            <br>
+
+            🌙 เหมาะสำหรับ : ช่วงเย็นถึงค่ำ
+
+        </div>
+
+
+        <div class="tag">
+            อาหาร • Street Food
+        </div>
+
+    </div>
+
+
+
+    <!-- 3 -->
+
+    <div class="activity">
+
+        <div class="icon">
+            🛍️
+        </div>
+
+
+        <h2>
+            ช้อปปิ้งและเดินห้าง
+        </h2>
+
+
+        <p>
+
+            เพลิดเพลินกับการช้อปปิ้ง
+            ตั้งแต่ตลาดขนาดใหญ่
+            ไปจนถึงศูนย์การค้าทันสมัย
+            พร้อมร้านอาหารและกิจกรรม
+            มากมายภายในพื้นที่
+
+        </p>
+
+
+        <div class="info">
+
+            📍 แนะนำ : สยาม
+            ICONSIAM และจตุจักร
+
+            <br>
+
+            🕙 เหมาะสำหรับ : ช่วงกลางวัน
+
+        </div>
+
+
+        <div class="tag">
+            ช้อปปิ้ง • ไลฟ์สไตล์
+        </div>
+
+    </div>
+
+
+
+    <!-- 4 -->
+
+    <div class="activity">
+
+        <div class="icon">
+            🚤
+        </div>
+
+
+        <h2>
+            ล่องเรือแม่น้ำเจ้าพระยา
+        </h2>
+
+
+        <p>
+
+            ชมวิวกรุงเทพฯ จากแม่น้ำเจ้าพระยา
+            สัมผัสบรรยากาศริมสองฝั่งแม่น้ำ
+            และมองเห็นสถานที่สำคัญ
+            จากมุมมองที่แตกต่างออกไป
+
+        </p>
+
+
+        <div class="info">
+
+            📍 แม่น้ำเจ้าพระยา
+
+            <br>
+
+            🌅 เหมาะสำหรับ : ช่วงเย็น
+            และพระอาทิตย์ตก
+
+        </div>
+
+
+        <div class="tag">
+            วิวเมือง • แม่น้ำ
+        </div>
+
+    </div>
+
+
+
+    <!-- 5 -->
+
+    <div class="activity">
+
+        <div class="icon">
+            📸
+        </div>
+
+
+        <h2>
+            ถ่ายรูปและเช็กอิน
+        </h2>
+
+
+        <p>
+
+            ค้นหามุมถ่ายรูปสวย ๆ
+            ตั้งแต่สถานที่เก่าแก่
+            คาเฟ่สวย ๆ ไปจนถึง
+            วิวเมืองและริมแม่น้ำ
+            เหมาะสำหรับเก็บภาพความทรงจำ
+
+        </p>
+
+
+        <div class="info">
+
+            📍 แนะนำ : เจริญกรุง
+            ตลาดน้อย และริมแม่น้ำเจ้าพระยา
+
+            <br>
+
+            ☀️ เหมาะสำหรับ : ช่วงบ่าย
+
+        </div>
+
+
+        <div class="tag">
+            ถ่ายรูป • คาเฟ่
+        </div>
+
+    </div>
+
+
+
+    <!-- 6 -->
+
+    <div class="activity">
+
+        <div class="icon">
+            🌃
+        </div>
+
+
+        <h2>
+            เดินเล่นยามค่ำคืน
+        </h2>
+
+
+        <p>
+
+            สัมผัสกรุงเทพฯ หลังพระอาทิตย์ตก
+            เดินชมแสงไฟ บรรยากาศยามค่ำคืน
+            ร้านอาหาร ตลาดกลางคืน
+            และย่านที่มีชีวิตชีวา
+
+        </p>
+
+
+        <div class="info">
+
+            📍 แนะนำ : เยาวราช
+            ถนนข้าวสาร และเอเชียทีค
+
+            <br>
+
+            🌙 เหมาะสำหรับ : ช่วงค่ำ
+
+        </div>
+
+
+        <div class="tag">
+            Night Life • แสงสี
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+<!-- ================= ข้อความท้าย ================= -->
+
+<div class="ending">
+
+    <h2>
+        ✨ กรุงเทพฯ มีอะไรให้ทำมากกว่าที่คิด
+    </h2>
+
+
+    <p>
+
+        ไม่ว่าจะเป็นสายกิน สายเที่ยว
+        สายถ่ายรูป สายช้อปปิ้ง
+        หรือคนที่ชอบเรียนรู้ประวัติศาสตร์
+
+        <br><br>
+
+        กรุงเทพฯ สามารถมอบประสบการณ์
+        ที่แตกต่างกันได้ในทุกครั้งที่มาเยือน
+
+        <br><br>
+
+        <b>
+            “ออกไปค้นพบกรุงเทพฯ
+            ในแบบของคุณเอง”
+        </b>
+
+    </p>
+
+</div>
+
+
+
+<!-- ================= ปุ่มกลับ ================= -->
+
+<div class="button-area">
+
+    <a href="w1.html" class="button">
+
+        🏠 กลับหน้าแรก
+
+    </a>
+
+</div>
+
+
+</body>
+
+</html>
