@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>ประวัติความเป็นมาของกรุงเทพมหานคร</title>
+
+    <meta charset="UTF-8">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family: Tahoma, Arial, sans-serif;
+
+            color: white;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(3,18,55,0.70),
+                    rgba(2,12,40,0.92)
+                ),
+
+                url("C:/NG/p2.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            background-repeat: no-repeat;
+
+            min-height: 100vh;
+
+        }
+
+
+
+        /* ================= เมนู ================= */
+
+        .navbar {
+
+            width: 100%;
+
+            padding: 20px 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background:
+                rgba(0,15,50,0.70);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.25);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+
+        .logo {
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .logo span {
+
+            color: #FFD43B;
+
+        }
+
+
+        .navbar a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin-left: 25px;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .navbar a:hover {
+
+            color: #FFD43B;
+
+        }
+
+
+
+        /* ================= หัวข้อ ================= */
+
+        .header {
+
+            text-align: center;
+
+            padding: 60px 20px 40px;
+
+        }
+
+
+        .header h1 {
+
+            font-size: 52px;
+
+            margin: 10px;
+
+            text-shadow:
+                3px 3px 12px black;
+
+        }
+
+
+        .header h1 span {
+
+            color: #FFD43B;
+
+        }
+
+
+        .header p {
+
+            font-size: 20px;
+
+            color: #eeeeee;
+
+            line-height: 1.8;
+
+        }
+
+
+        .line {
+
+            width: 80px;
+
+            height: 5px;
+
+            background: #FFD43B;
+
+            margin: 20px auto;
+
+            border-radius: 10px;
+
+        }
+
+
+
+        /* ================= กล่องเกริ่นนำ ================= */
+
+        .intro {
+
+            width: 85%;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 35px;
+
+            background:
+                rgba(255,255,255,0.12);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.30);
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 10px 35px
+                rgba(0,0,0,0.40);
+
+            text-align: center;
+
+        }
+
+
+        .intro h2 {
+
+            color: #FFD43B;
+
+            font-size: 30px;
+
+            margin-top: 0;
+
+        }
+
+
+        .intro p {
+
+            font-size: 17px;
+
+            line-height: 2;
+
+            color: #f1f1f1;
+
+        }
+
+
+
+        /* ================= ไทม์ไลน์ ================= */
+
+        .history {
+
+            width: 85%;
+
+            max-width: 1100px;
+
+            margin: 50px auto;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            font-size: 35px;
+
+            margin-bottom: 40px;
+
+            text-shadow:
+                2px 2px 8px black;
+
+        }
+
+
+        .section-title span {
+
+            color: #FFD43B;
+
+        }
+
+
+        .timeline {
+
+            position: relative;
+
+            margin: auto;
+
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 4px;
+
+            background: #FFD43B;
+
+            transform: translateX(-50%);
+
+            border-radius: 10px;
+
+        }
+
+
+        .timeline-item {
+
+            width: 50%;
+
+            padding: 20px 40px;
+
+            position: relative;
+
+        }
+
+
+        .timeline-item:nth-child(odd) {
+
+            left: 0;
+
+            text-align: right;
+
+        }
+
+
+        .timeline-item:nth-child(even) {
+
+            left: 50%;
+
+            text-align: left;
+
+        }
+
+
+        .timeline-item::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 18px;
+
+            height: 18px;
+
+            background: #FFD43B;
+
+            border: 4px solid white;
+
+            border-radius: 50%;
+
+            top: 35px;
+
+        }
+
+
+        .timeline-item:nth-child(odd)::after {
+
+            right: -11px;
+
+        }
+
+
+        .timeline-item:nth-child(even)::after {
+
+            left: -11px;
+
+        }
+
+
+        .timeline-box {
+
+            padding: 25px;
+
+            background:
+                rgba(255,255,255,0.12);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.30);
+
+            border-radius: 20px;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.35);
+
+            transition: 0.3s;
+
+        }
+
+
+        .timeline-box:hover {
+
+            transform: translateY(-5px);
+
+            border-color: #FFD43B;
+
+            background:
+                rgba(255,255,255,0.18);
+
+        }
+
+
+        .year {
+
+            display: inline-block;
+
+            padding: 8px 18px;
+
+            background: #FFD43B;
+
+            color: #333;
+
+            border-radius: 20px;
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .timeline-box h3 {
+
+            color: #FFD43B;
+
+            font-size: 24px;
+
+            margin: 10px 0;
+
+        }
+
+
+        .timeline-box p {
+
+            line-height: 1.9;
+
+            color: #eeeeee;
+
+        }
+
+
+
+        /* ================= ข้อมูลสำคัญ ================= */
+
+        .facts {
+
+            width: 85%;
+
+            max-width: 1100px;
+
+            margin: 60px auto;
+
+        }
+
+
+        .fact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .fact {
+
+            text-align: center;
+
+            padding: 25px 15px;
+
+            background:
+                rgba(255,255,255,0.12);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.25);
+
+            border-radius: 20px;
+
+            backdrop-filter: blur(10px);
+
+            transition: 0.3s;
+
+        }
+
+
+        .fact:hover {
+
+            transform: translateY(-8px);
+
+            border-color: #FFD43B;
+
+        }
+
+
+        .fact-icon {
+
+            font-size: 40px;
+
+        }
+
+
+        .fact h3 {
+
+            color: #FFD43B;
+
+            margin: 12px 0;
+
+        }
+
+
+        .fact p {
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            color: #ddd;
+
+        }
+
+
+
+        /* ================= ปิดท้าย ================= */
+
+        .ending {
+
+            width: 85%;
+
+            max-width: 1100px;
+
+            margin: 60px auto;
+
+            padding: 40px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,212,59,0.18),
+                    rgba(255,255,255,0.08)
+                );
+
+            border:
+                1px solid
+                rgba(255,212,59,0.45);
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(10px);
+
+        }
+
+
+        .ending h2 {
+
+            font-size: 32px;
+
+            color: #FFD43B;
+
+        }
+
+
+        .ending p {
+
+            font-size: 17px;
+
+            line-height: 2;
+
+            color: #eee;
+
+        }
+
+
+
+        /* ================= ปุ่ม ================= */
+
+        .button-area {
+
+            text-align: center;
+
+            padding: 20px 0 60px;
+
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            padding: 15px 35px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #FFD43B,
+                    #F2A900
+                );
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.4);
+
+            transition: 0.3s;
+
+        }
+
+
+        .button:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(255,210,50,0.5);
+
+        }
+
+
+
+        /* ================= หน้าจอเล็ก ================= */
+
+        @media (max-width: 800px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+            }
+
+
+            .header h1 {
+
+                font-size: 38px;
+
+            }
+
+
+            .timeline::before {
+
+                left: 20px;
+
+            }
+
+
+            .timeline-item {
+
+                width: 100%;
+
+                left: 0 !important;
+
+                text-align: left !important;
+
+                padding-left: 55px;
+
+                padding-right: 10px;
+
+            }
+
+
+            .timeline-item::after {
+
+                left: 9px !important;
+
+            }
+
+
+            .fact-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .fact-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+<!-- ================= เมนูด้านบน ================= -->
+
+<div class="navbar">
+
+    <div class="logo">
+
+        🏙️ <span>BANGKOK</span>
+
+    </div>
+
+
+    <div>
+
+        <a href="w1.html">
+            หน้าแรก
+        </a>
+
+        <a href="w4.html">
+            สถานที่ท่องเที่ยว
+        </a>
+        
+        <a href="w5.html">
+             กิจกรรมน่าสนใจ
+        </a>
+
+         <a href="w6.html">
+             วางแผนการเดินทาง
+         </a>
+
+            <a href="w7.html">
+                 เกี่ยวกับเรา
+         </a>
+
+        
+    </div>
+
+</div>
+
+
+
+<!-- ================= หัวข้อ ================= -->
+
+<div class="header">
+
+    <h1>
+
+        🏛️ ประวัติความเป็นมา
+        <span>กรุงเทพมหานคร</span>
+
+    </h1>
+
+
+    <div class="line"></div>
+
+
+    <p>
+
+        จากเมืองเล็กริมแม่น้ำเจ้าพระยา
+        สู่มหานครแห่งแสงสี วัฒนธรรม
+        และความทันสมัย
+
+    </p>
+
+</div>
+
+
+
+<!-- ================= เกริ่นนำ ================= -->
+
+<div class="intro">
+
+    <h2>
+        กรุงเทพมหานคร เมืองหลวงของประเทศไทย
+    </h2>
+
+
+    <p>
+
+        กรุงเทพมหานครตั้งอยู่บริเวณลุ่มแม่น้ำเจ้าพระยา
+        เป็นศูนย์กลางสำคัญของประเทศไทยทั้งด้านการปกครอง
+        เศรษฐกิจ การศึกษา วัฒนธรรม และการท่องเที่ยว
+        เมืองแห่งนี้มีเรื่องราวทางประวัติศาสตร์ยาวนานกว่า
+        200 ปี และยังคงผสมผสานเสน่ห์ของอดีตเข้ากับ
+        ความทันสมัยได้อย่างลงตัว
+
+    </p>
+
+
+    <p>
+
+        หากมองกรุงเทพมหานครในวันนี้
+        เราจะเห็นทั้งพระราชวัง วัดวาอาราม
+        ชุมชนเก่า อาคารสมัยใหม่ ห้างสรรพสินค้า
+        ตลาด ร้านอาหาร และย่านธุรกิจ
+        ซึ่งทั้งหมดล้วนเป็นส่วนหนึ่งของเรื่องราว
+        ที่ทำให้กรุงเทพฯ กลายเป็นมหานครที่มีเอกลักษณ์
+
+    </p>
+
+</div>
+
+
+
+<!-- ================= ไทม์ไลน์ ================= -->
+
+<div class="history">
+
+    <h2 class="section-title">
+
+        📜 เส้นทางแห่ง <span>ประวัติศาสตร์</span>
+
+    </h2>
+
+
+    <div class="timeline">
+
+
+        <!-- ยุคธนบุรี -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-box">
+
+                <div class="year">
+                    พ.ศ. 2310
+                </div>
+
+
+                <h3>
+                    กรุงธนบุรี
+                </h3>
+
+
+                <p>
+
+                    หลังกรุงศรีอยุธยาเสียแก่พม่า
+                    สมเด็จพระเจ้าตากสินมหาราช
+                    ทรงสถาปนากรุงธนบุรีเป็นราชธานี
+                    โดยตั้งอยู่บริเวณฝั่งตะวันตก
+                    ของแม่น้ำเจ้าพระยา
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- รัตนโกสินทร์ -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-box">
+
+                <div class="year">
+                    พ.ศ. 2325
+                </div>
+
+
+                <h3>
+                    สถาปนากรุงรัตนโกสินทร์
+                </h3>
+
+
+                <p>
+
+                    พระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราช
+                    รัชกาลที่ 1 ทรงย้ายราชธานีมายัง
+                    ฝั่งตะวันออกของแม่น้ำเจ้าพระยา
+                    และสถาปนากรุงรัตนโกสินทร์ขึ้น
+                    เป็นราชธานีแห่งใหม่
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- พระบรมมหาราชวัง -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-box">
+
+                <div class="year">
+                    พ.ศ. 2325
+                </div>
+
+
+                <h3>
+                    พระบรมมหาราชวัง
+                </h3>
+
+
+                <p>
+
+                    มีการสร้างพระบรมมหาราชวังขึ้น
+                    เพื่อเป็นศูนย์กลางของพระนคร
+                    และสร้างวัดพระศรีรัตนศาสดาราม
+                    หรือวัดพระแก้ว
+                    ซึ่งกลายเป็นสถานที่สำคัญ
+                    ทางประวัติศาสตร์และวัฒนธรรมไทย
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- การขยายตัว -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-box">
+
+                <div class="year">
+                    รัตนโกสินทร์ตอนกลาง
+                </div>
+
+
+                <h3>
+                    เมืองเริ่มขยายตัว
+                </h3>
+
+
+                <p>
+
+                    กรุงเทพมหานครเริ่มมีการขยายตัว
+                    มีการสร้างถนน สะพาน และระบบคมนาคม
+                    มากขึ้น ทำให้ชุมชนและย่านการค้า
+                    ขยายออกไปจากพื้นที่พระนคร
+                    และเกิดการเปลี่ยนแปลงเข้าสู่เมืองสมัยใหม่
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- กรุงเทพมหานคร -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-box">
+
+                <div class="year">
+                    พ.ศ. 2515
+                </div>
+
+
+                <h3>
+                    กรุงเทพมหานคร
+                </h3>
+
+
+                <p>
+
+                    มีการรวมจังหวัดพระนครและจังหวัดธนบุรี
+                    เข้าด้วยกันเป็น
+                    <b>“กรุงเทพมหานคร”</b>
+                    ตามประกาศคณะปฏิวัติ ฉบับที่ 335
+                    ทำให้เกิดรูปแบบการบริหารราชการ
+                    กรุงเทพมหานครในปัจจุบัน
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ปัจจุบัน -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-box">
+
+                <div class="year">
+                    ปัจจุบัน
+                </div>
+
+
+                <h3>
+                    มหานครแห่งเอเชีย
+                </h3>
+
+
+                <p>
+
+                    กรุงเทพมหานครเติบโตเป็นเมืองขนาดใหญ่
+                    และเป็นศูนย์กลางด้านเศรษฐกิจ
+                    การค้า การศึกษา การคมนาคม
+                    และการท่องเที่ยว
+                    มีทั้งสถานที่สำคัญทางประวัติศาสตร์
+                    และสิ่งก่อสร้างสมัยใหม่อยู่ร่วมกัน
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= ข้อมูลสำคัญ ================= -->
+
+<div class="facts">
+
+    <h2 class="section-title">
+
+        ⭐ รู้จักกรุงเทพฯ
+        <span>ในมุมสำคัญ</span>
+
+    </h2>
+
+
+    <div class="fact-grid">
+
+
+        <div class="fact">
+
+            <div class="fact-icon">
+                👑
+            </div>
+
+            <h3>
+                เมืองหลวง
+            </h3>
+
+            <p>
+
+                กรุงเทพมหานครเป็นเมืองหลวง
+                และศูนย์กลางการบริหารประเทศ
+
+            </p>
+
+        </div>
+
+
+
+        <div class="fact">
+
+            <div class="fact-icon">
+                🌊
+            </div>
+
+            <h3>
+                แม่น้ำเจ้าพระยา
+            </h3>
+
+            <p>
+
+                แม่น้ำสายสำคัญที่มีบทบาทต่อ
+                ประวัติศาสตร์ วิถีชีวิต
+                และการคมนาคมของกรุงเทพฯ
+
+            </p>
+
+        </div>
+
+
+
+        <div class="fact">
+
+            <div class="fact-icon">
+                🛕
+            </div>
+
+            <h3>
+                วัฒนธรรม
+            </h3>
+
+            <p>
+
+                มีวัด พระราชวัง ชุมชนเก่า
+                และมรดกทางวัฒนธรรม
+                ที่สะท้อนประวัติศาสตร์ไทย
+
+            </p>
+
+        </div>
+
+
+
+        <div class="fact">
+
+            <div class="fact-icon">
+                🌆
+            </div>
+
+            <h3>
+                เมืองทันสมัย
+            </h3>
+
+            <p>
+
+                มีระบบคมนาคม อาคารสำนักงาน
+                ศูนย์การค้า และย่านธุรกิจ
+                ที่เติบโตอย่างต่อเนื่อง
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= ปิดท้าย ================= -->
+
+<div class="ending">
+
+    <h2>
+        🌟 กรุงเทพฯ ไม่ได้มีแค่ตึกสูง
+    </h2>
+
+
+    <p>
+
+        เบื้องหลังแสงไฟและความทันสมัย
+        คือเรื่องราวของผู้คน ชุมชน
+        วัฒนธรรม และประวัติศาสตร์
+        ที่สืบทอดมาหลายยุคหลายสมัย
+
+        <br><br>
+
+        <b>
+            “กรุงเทพมหานคร เมืองที่อดีตยังคงอยู่
+            และอนาคตกำลังเดินหน้า”
+        </b>
+
+    </p>
+
+</div>
+
+
+
+<!-- ================= ปุ่มกลับหน้าแรก ================= -->
+
+<div class="button-area">
+
+    <a href="w1.html" class="button">
+
+        🏠 กลับหน้าแรก
+
+    </a>
+
+</div>
+
+
+</body>
+
+</html>
